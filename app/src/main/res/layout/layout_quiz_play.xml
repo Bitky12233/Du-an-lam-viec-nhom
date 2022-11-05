@@ -27,6 +27,7 @@
             android:background="@drawable/bg_green_shadow_question"
             android:gravity="center"
             android:text="what is this?"
+            android:id="@+id/txtCauhoi"
             android:textColor="#000000"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -97,6 +98,7 @@
             android:layout_height="40dp"
             android:background="@drawable/btn_green_radius_100"
             android:text="Answer"
+            android:id="@+id/Answer"
             android:textColor="#ffffff"
             android:textAllCaps="false"
             android:textSize="24dp"/>

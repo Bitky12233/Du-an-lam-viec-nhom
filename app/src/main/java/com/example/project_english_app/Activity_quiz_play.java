@@ -25,8 +25,6 @@ import java.util.ArrayList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import static android.R.attr.id;
-import static com.son.tracnghiem.R.attr.title;
 class QuestionNare {
     public String ID;
     public String Q;
@@ -50,7 +48,7 @@ public class Activity_quiz_play extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_quiz_play);
         Cauhoi = (TextView) findViewById(R.id.txt_question);
-        Ketqua = (TextView)findViewById(R.id.TxtKetqua);
+//        Ketqua = (TextView)findViewById(R.id.TxtKetqua);
         RG = (RadioGroup)findViewById(R.id.RadioGroupTraloi);
         BT = (Button) findViewById(R.id.btn_Answer);
         A = (RadioButton)findViewById(R.id.rb1);
@@ -65,19 +63,19 @@ public class Activity_quiz_play extends AppCompatActivity {
             public void onClick(View view) {
                 int idCheck = RG.getCheckedRadioButtonId();
                 switch (idCheck) {
-                    case R.id.RdbA:
+                    case R.id.rb1:
                         //Nếu đáp án là câu A thì cộng kq lên 1
                         if (L.get(pos).Answer.compareTo("A")==0) kq = kq+1;
                         break;
-                    case R.id.RdbB:
+                    case R.id.rb2:
                         //Nếu đáp án là câu B thì cộng kq lên 1
                         if (L.get(pos).Answer.compareTo("B")==0) kq = kq+1;
                         break;
-                    case R.id.RdbC:
+                    case R.id.rb3:
                         //Nếu đáp án là câu C thì cộng kq lên 1
                         if (L.get(pos).Answer.compareTo("C")==0) kq = kq+1;
                         break;
-                    case R.id.RdbD:
+                    case R.id.rb4:
                         //Nếu đáp án là câu D thì cộng kq lên 1
                         if (L.get(pos).Answer.compareTo("D")==0) kq = kq+1;
                         break;

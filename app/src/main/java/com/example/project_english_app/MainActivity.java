@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 //        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-//                .requestEmail()
+//                .requestEmail11111
 //                .build();
 //        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         imageView = findViewById(R.id.img_showApp);

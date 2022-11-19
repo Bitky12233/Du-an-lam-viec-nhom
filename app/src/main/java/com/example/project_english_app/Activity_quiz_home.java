@@ -21,7 +21,14 @@ public class Activity_quiz_home extends AppCompatActivity {
         btnQzStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openActivity_quiz_play();
+              openActivity_quiz_play();
+            }
+        });
+        btnQzHigSco = (Button) findViewById(R.id.btn_QuizHighSco);
+        btnQzHigSco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity_highcore();
             }
         });
 
@@ -55,6 +62,10 @@ public class Activity_quiz_home extends AppCompatActivity {
 
     public void gobackActivity_menu() {
         Intent intent = new Intent(this, Activity_menu.class);
+        startActivity(intent);
+    }
+    public void openActivity_highcore(){
+        Intent intent = new Intent(this,Activity_highcores.class);
         startActivity(intent);
     }
 

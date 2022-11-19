@@ -1,8 +1,6 @@
 package com.example.project_english_app;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -34,73 +32,73 @@ class QuestionNare{
     public String AnswerA, AnswerB, AnswerC, AnswerD, Answer;
 
 }
-public class Activity_quiz_play extends AppCompatActivity {
+public class Activity_quiz_play extends Activity {
 
     private Button btn;
-    TextView Cauhoi,Ketqua;
+    TextView Cauhoi, Ketqua;
     RadioGroup RG;
-    RadioButton A,B,C,D;
     Button BT;
-    int pos=0;//vị trí câu hỏi trong danh sách
-    int kq=0; //lưu số câu trả lời đúng
+
+    RadioButton A, B, C, D;
+    int pos = 0;//vị trí câu hỏi trong danh sách
+    int kq = 0; //lưu số câu trả lời đúng
     ArrayList<QuestionNare> L = new ArrayList(); //chứa câu hỏi
     int HighScore = 0;
-    @SuppressLint("MissingInflatedId")
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_quiz_play);
         Cauhoi = (TextView) findViewById(R.id.txtCauhoi);
-//        Ketqua = (TextView)findViewById(R.id.TxtKetqua);
-        RG = (RadioGroup)findViewById(R.id.radioGroup);
-        BT = (Button) findViewById(R.id.Answer);
-        A = (RadioButton)findViewById(R.id.rb1);
-        B = (RadioButton)findViewById(R.id.rb2);
-        C = (RadioButton)findViewById(R.id.rb3);
-        D = (RadioButton)findViewById(R.id.rb4);
+        Ketqua = (TextView)findViewById(R.id.txt_ketqua);
+        RG = (RadioGroup) findViewById(R.id.radioGroup);
+        BT = (Button) findViewById(R.id.btn_Answer);
+        A = (RadioButton) findViewById(R.id.rb1);
+        B = (RadioButton) findViewById(R.id.rb2);
+        C = (RadioButton) findViewById(R.id.rb3);
+        D = (RadioButton) findViewById(R.id.rb4);
         LoadHighScore();
         ReadData();
         Display(pos);
         BT.setOnClickListener(new View.OnClickListener() {
-                                  @SuppressLint("NonConstantResourceId")
-                                  @Override
-                                  public void onClick(View v) {
-                                      int idCheck = RG.getCheckedRadioButtonId();
-                                      switch (idCheck) {
-                                          case R.id.rb1:
-                                              if (L.get(pos).Answer.compareTo("A")==0) kq = kq+1;
-                                              break;
-                                          case R.id.rb2:
-                                              if (L.get(pos).Answer.compareTo("B")==0) kq = kq+1;
-                                              break;
-                                          case R.id.rb3:
-                                              if (L.get(pos).Answer.compareTo("C")==0) kq = kq+1;
-                                              break;
-                                          case R.id.rb4:
-                                              if (L.get(pos).Answer.compareTo("D")==0) kq = kq+1;
-                                              break;
+            @SuppressLint("NonConstantResourceId")
+            @Override
+            public void onClick(View v) {
+                int idCheck = RG.getCheckedRadioButtonId();
+                switch (idCheck) {
+                    case R.id.rb1:
+                        if (L.get(pos).Answer.compareTo("A") == 0) kq = kq + 1;
+                        break;
+                    case R.id.rb2:
+                        if (L.get(pos).Answer.compareTo("B") == 0) kq = kq + 1;
+                        break;
+                    case R.id.rb3:
+                        if (L.get(pos).Answer.compareTo("C") == 0) kq = kq + 1;
+                        break;
+                    case R.id.rb4:
+                        if (L.get(pos).Answer.compareTo("D") == 0) kq = kq + 1;
+                        break;
 
-                              }
-                                      pos++;
-                                      if (pos >= L.size()) {
-                                          Intent intent = new Intent(Activity_quiz_play.this, Activity_Result.class);
-                                          Bundle bundle = new Bundle();
-                                          bundle.putInt("KQ", kq);
-                                          bundle.putInt("Socau", pos);
-                                          intent.putExtra("MyPackage", bundle);
-                                          startActivity(intent);
-                                          if (kq > HighScore) {
-                                              HighScore = kq;
-                                              SaveHighScore();
-                                          }
-                                          finish();
-                                      }
-                                      else Display(pos); //Hiển thị câu hỏi kế tiếp
-                                  }
+                }
+                pos++;
+                if (pos >= L.size()) {
+                    Intent intent = new Intent(Activity_quiz_play.this, Activity_Result.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("KQ", kq);
+                    bundle.putInt("Socau", pos);
+                    intent.putExtra("MyPackage", bundle);
+                    startActivity(intent);
+                    if (kq > HighScore) {
+                        HighScore = kq;
+                        SaveHighScore();
+                    }
+                    finish();
+                } else Display(pos); //Hiển thị câu hỏi kế tiếp
+            }
         });
 
 
-            btn = (Button) findViewById(R.id.btn_Quiz_goBack);
+        btn = (Button) findViewById(R.id.btn_Quiz_goBack);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -183,4 +181,5 @@ public class Activity_quiz_play extends AppCompatActivity {
         editor.apply();
     }
 }
+
 

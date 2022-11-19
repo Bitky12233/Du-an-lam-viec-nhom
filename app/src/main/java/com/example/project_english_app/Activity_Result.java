@@ -14,8 +14,8 @@ public class Activity_Result extends Activity {
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_quiz_result);
-//        KQ = (TextView) findViewById(R.id.TxtKQ);
-//        BT = (Button)findViewById(R.id.BtnBack);
+        KQ = (TextView) findViewById(R.id.TxtKQ);
+        BT = (Button)findViewById(R.id.Btn_Back);
         Intent callerIntent=getIntent();
         Bundle packageFromCaller= ((Intent) callerIntent).getBundleExtra("MyPackage");
         KQ.setText(packageFromCaller.getInt("KQ")+"/"+ packageFromCaller.getInt("Socau"));

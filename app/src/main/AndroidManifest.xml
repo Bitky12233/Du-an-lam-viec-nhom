@@ -41,13 +41,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".Activity_quiz_play"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+<!--        <activity-->
+<!--            android:name=".Activity_quiz_play"-->
+<!--            android:exported="false">-->
+<!--            <meta-data-->
+<!--                android:name="android.app.lib_name"-->
+<!--                android:value="" />-->
+<!--        </activity>-->
         <activity
             android:name=".Activity_quiz_home"
             android:exported="false">
@@ -77,6 +77,11 @@
         </activity>
         <activity android:name=".LogIn" />
         <activity android:name=".Second" />
+        <activity android:name=".Activity_quiz_play"/>
+<!--            android:name=".Activity_quiz_play"&ndash;&gt;-->
+
+        <activity android:name=".Activity_Result"/>
+        <activity android:name=".Activity_highcores"/>
     </application>
 
 </manifest>

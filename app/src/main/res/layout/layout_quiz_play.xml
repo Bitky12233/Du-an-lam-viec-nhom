@@ -118,6 +118,7 @@
                 android:layout_marginLeft="120dp"
                 android:background="@drawable/btn_green_radius_100"
                 android:text="Skip"
+                android:id="@+id/btn_Skip"
                 android:textAllCaps="false"
                 android:textColor="#ffffff"
                 android:textSize="22dp" />

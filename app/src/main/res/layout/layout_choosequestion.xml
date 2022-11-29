@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/TxtN2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhập vào số lượng câu hỏi"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/TxtN1"
+    />
+
+    <EditText
+        android:id="@+id/choosequestion"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textAlignment="viewEnd"
+        android:layout_alignTop="@+id/TxtN2"
+        android:layout_toRightOf="@+id/TxtN2"
+        />
+    <Button
+        android:id="@+id/btn_StartChoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bắt đầu"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:layout_below="@+id/TxtN2"
+        android:layout_marginTop="30dp"
+    />
+
+    </LinearLayout>
+

@@ -79,7 +79,7 @@
         <activity android:name=".Second" />
         <activity android:name=".Activity_quiz_play"/>
 <!--            android:name=".Activity_quiz_play"&ndash;&gt;-->
-
+        <activity android:name=".Activity_quiz_chooseQuestion"/>
         <activity android:name=".Activity_Result"/>
         <activity android:name=".Activity_highcores"/>
     </application>

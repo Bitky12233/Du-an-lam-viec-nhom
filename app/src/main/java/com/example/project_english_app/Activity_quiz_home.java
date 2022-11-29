@@ -11,6 +11,7 @@ import android.widget.Button;
 public class Activity_quiz_home extends AppCompatActivity {
     private Button btnQzStart, btnQzHigSco, btnQzInstuc, btnQzBack;
 
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,8 @@ public class Activity_quiz_home extends AppCompatActivity {
         btnQzStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              openActivity_quiz_play();
+//              openActivity_quiz_play();
+                openActivity_Quiz_chooseQuestion();
             }
         });
         btnQzHigSco = (Button) findViewById(R.id.btn_QuizHighSco);
@@ -50,11 +52,14 @@ public class Activity_quiz_home extends AppCompatActivity {
 
     }
 
-    public void openActivity_quiz_play() {
-        Intent intent = new Intent(this, Activity_quiz_play.class);
+//    public void openActivity_quiz_play() {
+//        Intent intent = new Intent(this, Activity_quiz_play.class);
+//        startActivity(intent);
+//    }
+    public void openActivity_Quiz_chooseQuestion(){
+        Intent intent = new Intent(this, Activity_quiz_chooseQuestion.class);
         startActivity(intent);
     }
-
     public void openActivity_quiz_intruction() {
         Intent intent = new Intent(this, Activity_quiz_instruction.class);
         startActivity(intent);

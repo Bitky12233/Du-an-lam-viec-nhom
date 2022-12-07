@@ -1,6 +1,7 @@
 package com.example.project_english_app;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -31,9 +32,12 @@ public class LogIn  extends AppCompatActivity {
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         btn = (Button) findViewById(R.id.btn_login);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer song = MediaPlayer.create(LogIn.this,R.raw.ashura);
+                song.start();
                 openActivity_menu();
             }
         });

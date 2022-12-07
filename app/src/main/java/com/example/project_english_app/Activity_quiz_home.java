@@ -3,7 +3,10 @@ package com.example.project_english_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,11 +21,13 @@ public class Activity_quiz_home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_quiz_home);
 
+
         btnQzStart = (Button) findViewById(R.id.btn_QuizStart);
         btnQzStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 //              openActivity_quiz_play();
+
                 openActivity_Quiz_chooseQuestion();
             }
         });

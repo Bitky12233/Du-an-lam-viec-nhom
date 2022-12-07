@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -31,10 +32,12 @@ public class MainActivity extends AppCompatActivity {
     SignInButton signin;
     GoogleSignInClient mGoogleSignInClient;
     int RC_SIGN_IN = 0;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
 //        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
 //                .requestEmail11111
 //                .build();
@@ -61,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
              @Override
              public void run() {
                  Intent intent = new Intent(MainActivity.this, LogIn.class);
+
                  startActivity(intent);
                  finish();
              }

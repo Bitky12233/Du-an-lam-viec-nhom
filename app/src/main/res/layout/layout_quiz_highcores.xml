@@ -24,7 +24,63 @@
         android:layout_below="@+id/hgihcore"
         android:id="@+id/TxtHighscore"
         android:text=""
-        android:textSize="50dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:padding="30dp"
+
+        android:gravity="center"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/TxtHighscore"
+        android:id="@+id/TxtHigh2"
+        android:text=""
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:padding="30dp"
+
+        android:gravity="center"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/TxtHigh2"
+        android:id="@+id/TxtHigh3"
+        android:text=""
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:padding="30dp"
+
+        android:gravity="center"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/TxtHigh3"
+        android:id="@+id/TxtHigh4"
+        android:text=""
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:padding="30dp"
+
+        android:gravity="center"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/TxtHigh4"
+        android:id="@+id/TxtHigh5"
+        android:text=""
+        android:textSize="20dp"
         android:textStyle="bold"
         android:padding="30dp"
 
@@ -37,7 +93,7 @@
         android:layout_width="173dp"
         android:layout_height="43dp"
         android:layout_gravity="center"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="90dp"
         android:background="@drawable/btn_green_radius_100"
         android:text="Back"
         android:textColor="#ffffff"

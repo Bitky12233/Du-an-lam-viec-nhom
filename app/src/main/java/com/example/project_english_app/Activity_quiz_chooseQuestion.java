@@ -33,8 +33,14 @@ public class Activity_quiz_chooseQuestion extends Activity {
                 int A = Integer.parseInt(N1.getText().toString());
                 Bundle bundle = new Bundle();
                 bundle.putInt("SL1", A);
+                bundle.putInt("K", 0);
+                bundle.putInt("H",0);
+                bundle.putInt("C",0);
+                bundle.putInt("B",0);
+                bundle.putInt("D",0);
+                bundle.putInt("Z",0);
                 intent.putExtra("MyPackage", bundle);
-                if (A == 7) {
+                if (A == 5) {
 
                     startActivity(intent);
                 }

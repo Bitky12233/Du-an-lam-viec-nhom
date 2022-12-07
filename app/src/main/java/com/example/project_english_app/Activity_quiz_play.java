@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -49,6 +50,7 @@ public class Activity_quiz_play extends Activity
     RadioGroup RG;
     Button BT;
     Button Skip;
+
     private static final long COUNTDOWN_IN_MILLIS = 30000;
     private TextView textViewCountDown;
     private ColorStateList textColorDefaultCd;
@@ -57,20 +59,26 @@ public class Activity_quiz_play extends Activity
 
 
 
-
+    int kq = 0;
     RadioButton A, B, C, D;
     int pos = 0;//vị trí câu hỏi trong danh sách
-    int kq = 0; //lưu số câu trả lời đúng
+     //lưu số câu trả lời đúng
     ArrayList<QuestionNare> L = new ArrayList(); //chứa câu hỏi
     int HighScore = 0;
-
+    int High1 =0, High2 =0 , High3 =0 , High4 =0 , High5 =0;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+
         Intent callerIntent=getIntent();
         Bundle packageFromCaller= callerIntent.getBundleExtra("MyPackage");
         AA = packageFromCaller.getInt("SL1") ;
+
+
+
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.layout_quiz_play);
         Cauhoi = (TextView) findViewById(R.id.txtCauhoi);
         Ketqua = (TextView)findViewById(R.id.txt_ketqua);
@@ -85,6 +93,7 @@ public class Activity_quiz_play extends Activity
         textColorDefaultCd = textViewCountDown.getTextColors();
         timeLeftInMillis = COUNTDOWN_IN_MILLIS;
         startCountDown();
+        editscore();
         LoadHighScore();
         ReadData();
         Display(pos);
@@ -133,10 +142,10 @@ public class Activity_quiz_play extends Activity
                         bundle.putInt("Socau", pos);
                         intent.putExtra("MyPackage", bundle);
                         startActivity(intent);
-                        if (kq > HighScore) {
-                            HighScore = kq;
-                            SaveHighScore();
-                        }
+//                        if (kq > HighScore) {
+//                            HighScore = kq;
+//                            SaveHighScore();
+//                        }
                         finish();
 //                    timeLeftInMillis = COUNTDOWN_IN_MILLIS;
 
@@ -164,10 +173,33 @@ public class Activity_quiz_play extends Activity
                     bundle.putInt("Socau", pos);
                     intent.putExtra("MyPackage", bundle);
                     startActivity(intent);
-                    if (kq > HighScore) {
-                        HighScore = kq;
-                        SaveHighScore();
+                    if (kq > High1) {
+                         int change = High1 ;
+                        High1 = kq;
+                        kq = change ;
+
                     }
+                    if (kq >High2){
+                        int change = High2 ;
+                        High2 = kq;
+                        kq = change;
+                    }
+                    if (kq >High3){
+                        int change = High3;
+                        High3 = kq;
+                        kq = change;
+                    }
+                    if (kq > High4){
+                        int change =High4;
+                        High4 = kq;
+                        kq = change;
+                    }
+                    if (kq > High5){
+                        int change = High5;
+                        High5 = kq;
+                        kq = change;
+                    }
+                    SaveHighScore();
                     finish();
 //                    timeLeftInMillis = COUNTDOWN_IN_MILLIS;
 
@@ -309,19 +341,39 @@ public class Activity_quiz_play extends Activity
     {
         SharedPreferences sharedPreferences = getSharedPreferences("MyData",
                 Context.MODE_PRIVATE);
-        if (sharedPreferences !=null)
-        {
-            HighScore = sharedPreferences.getInt("H",0);
-        }
+            High1 = sharedPreferences.getInt("H",0);
+            High2 = sharedPreferences.getInt("C",0);
+            High3 = sharedPreferences.getInt("B",0);
+            High4 = sharedPreferences.getInt("D",0);
+            High5 = sharedPreferences.getInt("Z",0);
     }
     void SaveHighScore()
     {
         SharedPreferences sharedPreferences = getSharedPreferences("MyData",Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("H",HighScore);
+            editor.putInt("H",High1);
+            editor.putInt("C",High2);
+            editor.putInt("B",High3);
+            editor.putInt("D",High4);
+            editor.putInt("Z",High5);
+//        editor.putInt("H",0);
+//        editor.putInt("C",0);
+//        editor.putInt("B",0);
+//        editor.putInt("D",0);
+//        editor.putInt("Z",0);
+
+
         editor.apply();
     }
-
+    void editscore(){
+        SharedPreferences sharedPreferences = getSharedPreferences("MyData",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("H",0);
+        editor.putInt("C",0);
+        editor.putInt("B",0);
+        editor.putInt("D",0);
+        editor.putInt("Z",0);
+    }
     @Override
     protected void onDestroy()
     {
@@ -331,6 +383,7 @@ public class Activity_quiz_play extends Activity
             countDownTimer.cancel();
         }
     }
+
 }
 
 

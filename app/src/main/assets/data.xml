@@ -73,7 +73,43 @@
         <Answer>B</Answer>
     </Item>
     <Item>
-        <ID>2</ID>
+        <ID>9</ID>
+        <Question>You ________spill anything on the door.</Question>
+        <AnswerA>must</AnswerA>
+        <AnswerB>mustn’t</AnswerB>
+        <AnswerC>have to</AnswerC>
+        <AnswerD>don’t have to</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>10</ID>
+        <Question> My sister always hopes _____ to the headmaster by my parents.</Question>
+        <AnswerA>being introduced</AnswerA>
+        <AnswerB>to be introduced</AnswerB>
+        <AnswerC>to introduce</AnswerC>
+        <AnswerD>introducing</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>11</ID>
+        <Question>Do you mind _______ me ____________this computer?.</Question>
+        <AnswerA>help/fixing</AnswerA>
+        <AnswerB> helping/ fixing</AnswerB>
+        <AnswerC>helping/fix </AnswerC>
+        <AnswerD>to help/ to fix</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>12</ID>
+        <Question>It’s possible ________ a train across Canada.</Question>
+        <AnswerA>take  </AnswerA>
+        <AnswerB>to take</AnswerB>
+        <AnswerC>taking</AnswerC>
+        <AnswerD>to be taken</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>13</ID>
         <Question>There ..... many books on the table.</Question>
         <AnswerA>is</AnswerA>
         <AnswerB>have</AnswerB>
@@ -82,84 +118,48 @@
         <Answer>C</Answer>
     </Item>
     <Item>
-        <ID>2</ID>
-        <Question>There ..... many books on the table.</Question>
-        <AnswerA>is</AnswerA>
-        <AnswerB>have</AnswerB>
-        <AnswerC>are</AnswerC>
-        <AnswerD>has</AnswerD>
-        <Answer>C</Answer>
+        <ID>14</ID>
+        <Question> My brother _________ in this school before he _______ for Hue last year.</Question>
+        <AnswerA>taught/ had left</AnswerA>
+        <AnswerB> had taught/ left</AnswerB>
+        <AnswerC>taught/ had left </AnswerC>
+        <AnswerD>teaches/ leaves</AnswerD>
+        <Answer>B</Answer>
     </Item>
     <Item>
-        <ID>2</ID>
-        <Question>There ..... many books on the table.</Question>
-        <AnswerA>is</AnswerA>
-        <AnswerB>have</AnswerB>
-        <AnswerC>are</AnswerC>
-        <AnswerD>has</AnswerD>
-        <Answer>C</Answer>
+        <ID>15</ID>
+        <Question>The office staff decided _______ a retirement party for Mr. Green.</Question>
+        <AnswerA>having</AnswerA>
+        <AnswerB>to have</AnswerB>
+        <AnswerC>having had</AnswerC>
+        <AnswerD>to have had</AnswerD>
+        <Answer>B</Answer>
     </Item>
     <Item>
-        <ID>2</ID>
-        <Question>There ..... many books on the table.</Question>
-        <AnswerA>is</AnswerA>
-        <AnswerB>have</AnswerB>
-        <AnswerC>are</AnswerC>
-        <AnswerD>has</AnswerD>
-        <Answer>C</Answer>
+        <ID>16</ID>
+        <Question>Their professional relationship developed into a lasting ____.</Question>
+        <AnswerA>friendly  </AnswerA>
+        <AnswerB>friendliness</AnswerB>
+        <AnswerC>friend</AnswerC>
+        <AnswerD>friendship</AnswerD>
+        <Answer>D</Answer>
     </Item>
     <Item>
-        <ID>2</ID>
-        <Question>There ..... many books on the table.</Question>
-        <AnswerA>is</AnswerA>
-        <AnswerB>have</AnswerB>
-        <AnswerC>are</AnswerC>
-        <AnswerD>has</AnswerD>
-        <Answer>C</Answer>
-    </Item>
-    <Item>
-        <ID>2</ID>
-        <Question>There ..... many books on the table.</Question>
-        <AnswerA>is</AnswerA>
-        <AnswerB>have</AnswerB>
-        <AnswerC>are</AnswerC>
-        <AnswerD>has</AnswerD>
-        <Answer>C</Answer>
-    </Item>
-    <Item>
-        <ID>2</ID>
-        <Question>There ..... many books on the table.</Question>
-        <AnswerA>is</AnswerA>
-        <AnswerB>have</AnswerB>
-        <AnswerC>are</AnswerC>
-        <AnswerD>has</AnswerD>
-        <Answer>C</Answer>
-    </Item>
-    <Item>
-        <ID>2</ID>
-        <Question>There ..... many books on the table.</Question>
-        <AnswerA>is</AnswerA>
-        <AnswerB>have</AnswerB>
-        <AnswerC>are</AnswerC>
-        <AnswerD>has</AnswerD>
-        <Answer>C</Answer>
-    </Item>
-    <Item>
-        <ID>2</ID>
-        <Question>There ..... many books on the table.</Question>
-        <AnswerA>is</AnswerA>
-        <AnswerB>have</AnswerB>
-        <AnswerC>are</AnswerC>
-        <AnswerD>has</AnswerD>
-        <Answer>C</Answer>
+        <ID>17</ID>
+        <Question>Each year many people _________ take care of the old and disabled.</Question>
+        <AnswerA>volunteer </AnswerA>
+        <AnswerB>voluntarily</AnswerB>
+        <AnswerC>voluntary</AnswerC>
+        <AnswerD>volunteering</AnswerD>
+        <Answer>B</Answer>
     </Item> <Item>
-    <ID>2</ID>
-    <Question>There ..... many books on the table.</Question>
-    <AnswerA>is</AnswerA>
-    <AnswerB>have</AnswerB>
-    <AnswerC>are</AnswerC>
-    <AnswerD>has</AnswerD>
-    <Answer>C</Answer>
+    <ID>18</ID>
+    <Question>Parents should try to see things from a teenager’s _______.</Question>
+    <AnswerA>difference </AnswerA>
+    <AnswerB>choice</AnswerB>
+    <AnswerC>conflicts </AnswerC>
+    <AnswerD>viewpoint</AnswerD>
+    <Answer>D</Answer>
 </Item>
 
 </Questionare>

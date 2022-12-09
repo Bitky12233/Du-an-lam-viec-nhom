@@ -142,8 +142,8 @@ public class Activity_quiz_play extends Activity
                 if(a == true){
                     pos++;
                     onDestroy();
-                    timeLeftInMillis = COUNTDOWN_IN_MILLIS;
-                    startCountDown();
+//                    timeLeftInMillis = COUNTDOWN_IN_MILLIS;
+//                    startCountDown();
 
                     if (pos >= L.size()) {
                         Intent intent = new Intent(Activity_quiz_play.this, Activity_Result_Quiz.class);

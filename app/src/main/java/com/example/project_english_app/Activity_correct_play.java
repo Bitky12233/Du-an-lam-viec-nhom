@@ -543,7 +543,7 @@ public class Activity_correct_play extends AppCompatActivity {
         email = myPrefs.getString("Email1", "");
 
 //        MemberList = new ArrayList<>();
-        if (MemberList.size() >= 0) {
+        if (MemberList.size() > 0) {
             Log.e("not null", "asdasd");
             MemberList = MemberList();
             for (int i = 0; i < MemberList.size(); i++) {

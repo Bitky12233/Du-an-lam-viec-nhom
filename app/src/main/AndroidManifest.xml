@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +17,7 @@
         android:theme="@style/Theme.Project_English_App"
         tools:targetApi="31"
         tools:ignore="ExtraText">
-        android:largeHeap="true"
+
 
         <activity
             android:name=".Activity_one_item_rank"
@@ -102,6 +104,7 @@
 
         </activity>
         <activity android:name=".Activity_LogIn" />
+
         <activity android:name=".Activity_playAgain" />
         <activity android:name=".Activity_Register" />
         <activity android:name=".TagLayout_Answer" />
@@ -111,5 +114,7 @@
         <activity android:name=".Activity_highscores_Quiz"></activity>
 
     </application>
+
+
 
 </manifest>
